@@ -51,7 +51,7 @@ body, html {
         color: white;
         padding: 14px 20px;
         cursor: pointer;
-        position: fixed;
+        position: relative;
       }
       .loginPopup {
         position: relative;
