@@ -1,4 +1,4 @@
-
+<style>
 /* Set height of body and the document to 100% */
 body, html {
   height: 100%;
@@ -35,7 +35,7 @@ body, html {
 #Project {background-color: #4CB4E7;}
 #Data {background-color: #4CB4E7;}
 #Help {background-color: #4CB4E7;}
-</style>
+
 
 /* /////////////////// Button Styling ///////////////////////// */
 
@@ -52,74 +52,62 @@ body, html {
   margin: 4px 2px;
   cursor: pointer;
 }
-</style>
+
 
 /* //////////////////  POPUP FORM SYLING  /////////////////////// */
-/* Popup container */
-.popup {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-/* The actual popup (appears on top) 
-*/
-.popup .popuptext 
-{
-  visibility: hidden;
-  width: 
-160px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 8px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-
-    
-margin-left: -80px;
-}
-
-/* Popup arrow */
-.popup .popuptext::after {
-  content: "";
-
-    position: absolute;
-  
-top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-
-    border-color: #555 transparent 
-transparent transparent;
-}
-
-/* 
-Toggle this class when clicking on the popup container (hide and show the 
-popup) */
-.popup .show {
-  
-visibility: visible;
-  -webkit-animation: 
-fadeIn 1s;
-  animation: fadeIn 1s
-}
-
-/* Add animation (fade in the popup) */
-
-@-webkit-keyframes fadeIn {
-  from {opacity: 0;} 
-  to {opacity: 1;}
-}
-
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  
-to {opacity:1 ;}
-} 
+    /*add full-width input fields*/
+     
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 2px solid #ccc;
+        box-sizing: border-box;
+    }
+    /* set a style for all buttons*/
+     
+    button {
+        background-color: Green;
+        color: white;
+        padding: 15px 20px;
+        margin: 8px 0;
+        cursor: pointer;
+        width: 100%;
+    }
+    /*set styles for the cancel button*/
+     
+    .cancelbtn {
+        padding: 15px 20px;
+        background-color: #FF2E00;
+    }
+    /*float cancel and signup buttons and add an equal width*/
+     
+    .cancelbtn,
+    .signupbtn {
+        float: left;
+        width: 50%;
+    }
+    /*add padding to container elements*/
+     
+    .container {
+        padding: 16px;
+    }
+    /*clear floats*/
+     
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    /*styles for cancel button and signup button 
+      on extra small screens*/
+     
+    @media screen and (max-width: 300px) {
+        .cancelbtn,
+        .signupbtn {
+            width: 100%;
+        }
+    }
+</style>
