@@ -59,14 +59,32 @@ document.getElementById("defaultOpen").click();
         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
         <form class="modal-content animate" action="/action_page.php">
             <div class="container">
+		    <h3>Project Form</h3>
+		    <h2>Project Name</h2>
                 <label><b>Project Name</b></label>
                 <input type="text" placeholder="Project Name" name="Project_Name" required>
+		    <h2>Project Tier</h2>
                 <label><b>Project Tier</b></label>
                 <input type="text" placeholder="Project Tier" name="Project Tier" required>
+		    <h2>Project Contract Date</h2>
                 <label><b>Start Date</b></label>
                 <input type="date"  name="Project_Contract_Date" required>
+		    <h2>Project Start Date</h2>
                 <label><b>Start Date</b></label>
                 <input type="date"  name="Project_Start_Date" required>
+		    <br>
+		    <br>
+		    <h3> Select Connected Content </h3>
+		    <h2> Customer Select </h2>
+		    <label for="customer">Choose a Customer:</label>
+
+		<select name="Customer" id="cars">
+  		<option value="Customer 1">Customer 1</option>
+  		<option value="Customer 2">Customer 2</option>
+  		<option value="Customer 3">Customer 3</option>
+  		<option value="Customer 4">Customer 4</option>
+		</select>
+		    
              
  
                 <div class="clearfix">
