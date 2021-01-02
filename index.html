@@ -129,12 +129,46 @@ var table = new Tabulator("#example-table", {
                 <label><b>Start Date</b></label>
                 <input type="date"  name="Project_Start_Date" required>
 		  		   
-		    
+		<script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
+
+<script>
+var docClient = new AWS.DynamoDB.DocumentClient();
+
+function createItem() {
+    var params = {
+        TableName :"Movies",
+        Item:{
+            "year": 2015,
+            "title": "The Big New Movie",
+            "info":{
+                "plot": "Nothing happens at all.",
+                "rating": 0
+            }
+        }
+    };
+    docClient.put(params, function(err, data) {
+        if (err) {
+            document.getElementById('textarea').innerHTML = "Unable to add item: " + "\n" + JSON.stringify(err, undefined, 2);
+        } else {
+            document.getElementById('textarea').innerHTML = "PutItem succeeded: " + "\n" + JSON.stringify(data, undefined, 2);
+        }
+    });
+}
+
+</script>  
+	<body>
+		<input id="createItem" class = "signupbtn" type="button" value="Submit" onclick="createItem();" />
+		<br><br>
+		<textarea readonly id= "textarea" style="width:400px; height:800px"></textarea>
+
+		</body>
+		    <!-- Old Buttons
            <div class="clearfix">
                     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
                     <button type="submit" class="signupbtn">Submit</button>
                 </div>
             </div>
+		-->
    
 
 </body>
