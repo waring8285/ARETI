@@ -15,19 +15,42 @@
 
 </head>
 <body>
-
+	
+<!-- ///////////////////// Site Tab Table \\\\\\\\\\\\\\\\\\\\\\\ -->
+	
 <button class="tablink" onclick="openPage('Home', this, 'white')" id="defaultOpen">Home</button>
 <button class="tablink" onclick="openPage('Project', this, 'white')">Project Management</button>
 <button class="tablink" onclick="openPage('Data', this, 'white')">Data Management</button>
 <button class="tablink" onclick="openPage('Help', this, 'white')">Help</button>
+	
+	  <script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
 
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+	</body>
+
+<!-- ///////////////////// Home Tab Content \\\\\\\\\\\\\\\\\\\\\\\ -->
 <div id="Home" class="tabcontent">
   <h3>ARETI Enterprise System</h3>
   <p>This is the future home of the ARETI Enterprise System. Stay Tuned!</p>
-	
-	
+		
 </div>
 
+<!-- ///////////////////// Project Tab Content \\\\\\\\\\\\\\\\\\\\\\\ -->
 <div id="Project" class="tabcontent">
   <h3>Project Management</h3>
   <p>Manage your freakin' projects!</p>
@@ -35,7 +58,6 @@
 
   <body>
         
-	
 	<div id="example-table"></div>
 
 	
@@ -65,41 +87,22 @@ var table = new Tabulator("#example-table", {
  	},
 });
 	</script>
-	  
-	</body>
-	
-
 	
 </div>
 
+<!-- ///////////////////// Data Management Tab Content \\\\\\\\\\\\\\\\\\\\\\\ -->
 <div id="Data" class="tabcontent">
   <h3>Data Management</h3>
   <p>Manage your freakin' data!.</p>
 </div>
 
+<!-- ///////////////////// Help Tab Content \\\\\\\\\\\\\\\\\\\\\\\ -->
 <div id="Help" class="tabcontent">
   <h3>Help</h3>
   <p>Help.</p>
 </div>
 
-<script>
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
 
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
    
 </body>
 </html> 
