@@ -95,44 +95,6 @@ document.getElementById("defaultOpen").click();
                 </div>
             </div>
    
-<head>
-<script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
-
-<script>
-AWS.config.update({
-  region: "us-east-2",
-  endpoint: 'http://localhost:8000',
-  });
-
-var docClient = new AWS.DynamoDB.DocumentClient();
-
-function createItem() {
-    var params = {
-        TableName :"Project",
-        Item:{
-            "Project_Name": Project_Name,
-            "Project_Tier": Project_Tier,
-                      }
-        }
-    };
-    docClient.put(params, function(err, data) {
-        if (err) {
-            document.getElementById('textarea').innerHTML = "Unable to add item: " + "\n" + JSON.stringify(err, undefined, 2);
-        } else {
-            document.getElementById('textarea').innerHTML = "PutItem succeeded: " + "\n" + JSON.stringify(data, undefined, 2);
-        }
-    });
-}
-	 </form>
-    </div>
-
-</script>
-</head>
-
-<body>
-<input id="createItem" type="button" value="Create Item" onclick="createItem();" />
-<br><br>
-<textarea readonly id= "textarea" style="width:400px; height:800px"></textarea>
 
 </body>
     <!--close the modal by just clicking outside of the modal-->
