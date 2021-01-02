@@ -35,33 +35,6 @@
 
   <body>
         
-    </div>
-    <div class="loginPopup">
-      <div class="formPopup" id="popupForm">
-        <form action="/action_page.php" class="formContainer">
-          <h2>Create New Project</h2>
-          <label for="Project Nmae">
-            <strong>Project Name</strong>
-          </label>
-          <input type="text" id="Project_Name" placeholder="Project Name" name="Project Name" required>
-          <label for="psw">
-            <strong>Password</strong>
-          </label>
-          <input type="password" id="psw" placeholder="Your Password" name="psw" required>
-          <button type="submit" class="btn">Log in</button>
-          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-        </form>
-      </div>
-    </div>
-    <script>
-      function openForm() {
-        document.getElementById("popupForm").style.display = "block";
-      }
-      function closeForm() {
-        document.getElementById("popupForm").style.display = "none";
-      }
-    </script>
-  </body>
 	
 	<div id="example-table"></div>
 
@@ -92,6 +65,8 @@ var table = new Tabulator("#example-table", {
  	},
 });
 	</script>
+	  
+	</body>
 	
 
 	
