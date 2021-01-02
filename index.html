@@ -7,14 +7,6 @@
 <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.9.3/dist/js/tabulator.min.js"></script>
 <script src="https://sdk.amazonaws.com/js/aws-sdk-2.819.0.min.js"></script>
 <title>ARETI</title>
-</head>
-
-<body>
-
-
-
-</head>
-<body>
 	
 <!-- ///////////////////// Site Tab Table \\\\\\\\\\\\\\\\\\\\\\\ -->
 	
@@ -41,7 +33,10 @@ function openPage(pageName,elmnt,color) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 </script>
-	</body>
+	
+	</head>
+	<body>
+		
 
 <!-- ///////////////////// Home Tab Content \\\\\\\\\\\\\\\\\\\\\\\ -->
 <div id="Home" class="tabcontent">
@@ -55,31 +50,23 @@ document.getElementById("defaultOpen").click();
   <h3>Project Management</h3>
   <p>Manage your freakin' projects!</p>
 	
-<body>
 
 <!-- Project Form -->
-    <!--Step 1:Adding HTML-->
+
     <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Create New Project</button>
  
     <div id="id01" class="modal">
         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
         <form class="modal-content animate" action="/action_page.php">
             <div class="container">
-		    <h2>Project Name</h2>
                 <label><b>Project Name</b></label>
                 <input type="text" placeholder="Project Name" name="Project_Name" required>
-		    <h2>Project Tier</h2>
                 <label><b>Project Tier</b></label>
                 <input type="text" placeholder="Project Tier" name="Project Tier" required>
-		    <h2>Contract Date</h2>
                 <label><b>Start Date</b></label>
                 <input type="date"  name="Project_Contract_Date" required>
-		    <h2>Start Date</h2>
                 <label><b>Start Date</b></label>
                 <input type="date"  name="Project_Start_Date" required>
-             
-                          
-                <input type="checkbox"> Remember me
              
  
                 <div class="clearfix">
