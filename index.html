@@ -89,16 +89,52 @@ document.getElementById("defaultOpen").click();
   		<option value="Customer 4">Customer 4</option>
 		</select>
 		    
-             
- 
-                <div class="clearfix">
+           <div class="clearfix">
                     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                    <button type="submit" class="signupbtn">Submit</button>
+                   
                 </div>
             </div>
-        </form>
+       
+ <head>
+<script src="https://sdk.amazonaws.com/js/aws-sdk-2.7.16.min.js"></script>
+
+<script>
+AWS.config.update({
+  region: "us-east-2",
+  endpoint: 'http://localhost:8000',
+  });
+
+var docClient = new AWS.DynamoDB.DocumentClient();
+
+function createItem() {
+    var params = {
+        TableName :"Project",
+        Item:{
+            "Project_Name": Project_Name,
+            "Project_Tier": Project_Tier,
+                      }
+        }
+    };
+    docClient.put(params, function(err, data) {
+        if (err) {
+            document.getElementById('textarea').innerHTML = "Unable to add item: " + "\n" + JSON.stringify(err, undefined, 2);
+        } else {
+            document.getElementById('textarea').innerHTML = "PutItem succeeded: " + "\n" + JSON.stringify(data, undefined, 2);
+        }
+    });
+}
+	 </form>
     </div>
- 
+
+</script>
+</head>
+
+<body>
+<input id="createItem" type="button" value="Create Item" onclick="createItem();" />
+<br><br>
+<textarea readonly id= "textarea" style="width:400px; height:800px"></textarea>
+
+</body>
     <!--close the modal by just clicking outside of the modal-->
     <script>
         var modal = document.getElementById('id01');
