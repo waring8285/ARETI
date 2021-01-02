@@ -62,8 +62,12 @@ document.getElementById("defaultOpen").click();
 		    <h1>Project Form</h3>
                 <label><b>Project Name</b></label>
                 <input type="text" placeholder="Project Name" name="Project_Name" required>
-		<label><b>Project Tier</b></label>
-                <input type="text" placeholder="Project Tier" name="Project Tier" required>
+		<label for="Project_Tier">Project Tier:</label>
+		<select name="Project Tier" id="tier">
+  		<option value="Tier 1">Tier 1</option>
+  		<option value="Tier 2">Tier 2</option>
+  		<option value="Tier 3">Tier 3</option>	
+		</select>
                 <label><b>Start Date</b></label>
                 <input type="date"  name="Project_Contract_Date" required>
                 <label><b>Start Date</b></label>
