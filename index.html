@@ -99,6 +99,23 @@ var table = new Tabulator("#example-table", {
         <form class="modal-content animate" action="/action_page.php">
             <div class="container">
 		    <h1>Project Form</h3>
+		 <h3> Select Connected Content </h3>
+		    <label for="customer">Choose a Customer:</label>
+		<select name="Customer" id="cars">
+  		<option value="Customer 1">Customer 1</option>
+  		<option value="Customer 2">Customer 2</option>
+  		<option value="Customer 3">Customer 3</option>
+  		<option value="Customer 4">Customer 4</option>
+		</select>
+		    <label for="Sales_Rep">Choose a Sales Rep:</label>
+		<select name="Sales_Rep" id="Sales_Rep">
+  		<option value="Rep 1">Customer 1</option>
+  		<option value="Rep 2">Customer 2</option>
+  		<option value="Rep 3">Customer 3</option>
+  		<option value="Rep 4">Customer 4</option>
+		</select>
+		<br>
+		<br>
                 <label><b>Project Name</b></label>
                 <input type="text" placeholder="Project Name" name="Project_Name" required>
 		<label for="Project_Tier">Project Tier:</label>
@@ -111,21 +128,11 @@ var table = new Tabulator("#example-table", {
                 <input type="date"  name="Project_Contract_Date" required>
                 <label><b>Start Date</b></label>
                 <input type="date"  name="Project_Start_Date" required>
-		    <br>
-		    <br>
-		    <h3> Select Connected Content </h3>
-		    <label for="customer">Choose a Customer:</label>
-
-		<select name="Customer" id="cars">
-  		<option value="Customer 1">Customer 1</option>
-  		<option value="Customer 2">Customer 2</option>
-  		<option value="Customer 3">Customer 3</option>
-  		<option value="Customer 4">Customer 4</option>
-		</select>
+		  		   
 		    
            <div class="clearfix">
                     <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                   
+                    <button type="submit" class="signupbtn">Sign Up</button>
                 </div>
             </div>
    
