@@ -136,14 +136,11 @@ var docClient = new AWS.DynamoDB.DocumentClient();
 
 function createItem() {
     var params = {
-        TableName :"Movies",
+        TableName :"Project",
         Item:{
-            "year": 2015,
-            "title": "The Big New Movie",
-            "info":{
-                "plot": "Nothing happens at all.",
-                "rating": 0
-            }
+            "Project_Name": "Test Hard Code",
+            "Project_Tier": "Tier 2",
+                 }
         }
     };
     docClient.put(params, function(err, data) {
